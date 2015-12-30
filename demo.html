@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>无缝滚动</title>
+	<style type="text/css">
+	*{margin:0;padding:0;}
+	ul,li{list-style:none;}
+	.color-red{color:red;}
+	.bg-red{background-color:red;}
+	.cycle{
+		width:500px;
+		height:100px;
+		margin:50px auto;
+		border:1px solid #ddd;
+		overflow:hidden;
+	}
+	.cycle ul{
+		width:100%;
+		overflow:hidden;
+	}
+	.cycle ul:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.cycle ul > li{
+		float:left;
+		height:30px;
+		line-height:30px;
+		padding:0 10px;
+		width:50%;
+		box-sizing:border-box;
+	}
+	</style>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="cycle.js"></script>
+
+</head>
+<body>
+<div class="cycle" id="cycle">
+	<ul>
+		<li>这是第一条1111</li>
+		<li>这是第一条2222</li>
+		<li>这是第一条<span class="color-red">33</span>33</li>
+		<li>这是第一条4444</li>
+		<li>这是第一条5555</li>
+		<li>这是第一条<span class="bg-red">66</span>66</li>
+		<li>这是第一条7777</li>
+		<li>这是第一条8888</li>
+	</ul>
+</div>
+<script type="text/javascript">
+	$('#cycle').cycle();
+</script>
+</body>
+</html>
